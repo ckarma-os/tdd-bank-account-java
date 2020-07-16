@@ -5,7 +5,7 @@ public class Account {
 	private int balance;
 
 	public int balance() {
-		return balance;
+		return this.balance;
 	}
 
 	public void deposit(int balance) {
