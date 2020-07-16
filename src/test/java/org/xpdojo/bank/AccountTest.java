@@ -8,30 +8,42 @@ public class AccountTest {
 	
 	@Test
 	public void testToCreateAnAccountWithZeroBalance() {
-		Account account = new Account();
+		//When
+		Account account = new Account();		
+		//Verify
 		assertThat(account.balance()).isEqualTo(0);
 	}
 	
 	@Test
 	public void testToCreateAnAccountWithIncreasingBalance() {
-		Account account = new Account();
-		account.deposit(10);
+		//Given
+		Account account = new Account();		
+		//When
+		account.deposit(10);		
+		//Verify
 		assertThat(account.balance()).isEqualTo(10);
 	}
 	
 	@Test
 	public void testAccountWithMutipleDeposits() {
+		//Given
 		Account account = new Account();
+		//When
 		account.deposit(10);
-		account.deposit(20);
+		account.deposit(20);		
+		//Verify
 		assertThat(account.balance()).isEqualTo(30);
 	}
 	
 	@Test
-	public void testAccountToWithdrawMoney() {
+	public void testAccountToWithdrawAmount() {
+		//Given
 		Account account = new Account();
-		account.withdraw(10);
-		int balance = account.balance();
+		account.deposit(10);
+		//When
+		account.withdraw(10);		
+		//Verify
 		assertThat(account.balance()).isGreaterThanOrEqualTo(0);
+		assertThat(account.balance()).isEqualTo(0);
 	}
 }
