@@ -15,6 +15,14 @@ public class AccountTest {
 	}
 	
 	@Test
+	public void testToCreateAnAccountWithGivenBalance() {
+		//When
+		Account account = new Account(10);		
+		//Verify
+		assertThat(account.balance()).isEqualTo(10);
+	}
+	
+	@Test
 	public void testToCreateAnAccountWithIncreasingBalance() {
 		//Given
 		Account account = new Account();		
