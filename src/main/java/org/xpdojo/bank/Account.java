@@ -3,6 +3,13 @@ package org.xpdojo.bank;
 public class Account {
 
 	private int balance;
+	
+	public Account() {
+	}
+
+	public Account(int openingBalance) {
+		this.balance = openingBalance;
+	}
 
 	public int balance() {
 		return this.balance;
