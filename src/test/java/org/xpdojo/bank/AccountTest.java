@@ -31,6 +31,7 @@ public class AccountTest {
 	public void testAccountToWithdrawMoney() {
 		Account account = new Account();
 		account.withdraw(10);
+		int balance = account.balance();
 		assertThat(account.balance()).isGreaterThanOrEqualTo(0);
 	}
 }
